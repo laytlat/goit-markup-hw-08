@@ -1,0 +1,55 @@
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  color: $main-color;
+
+  letter-spacing: 0.03em;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.hero__button,
+.filter__button,
+.subscription__button,
+.modal-button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.section-title {
+  color: $secondary-color;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}

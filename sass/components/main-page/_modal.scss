@@ -1,0 +1,213 @@
+.backdrop {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  transition: opacity 250ms $timing-function, visibility 250ms $timing-function;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 581px;
+
+  background-color: $sixth-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform 250ms $timing-function;
+
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    padding: 6px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: $sixth-color;
+
+    &:hover,
+    &:focus {
+      fill: $third-color;
+    }
+  }
+
+  &__close-button {
+    display: block;
+    justify-content: flex-end;
+    border-radius: 50%;
+
+    transition: fill 250ms $timing-function;
+  }
+
+  &__title {
+    margin-top: 40px;
+    text-align: center;
+
+    color: $secondary-color;
+
+    font-style: normal;
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.modal-list {
+  margin: 12px 40px 20px;
+
+  &__item {
+    margin-top: 10px;
+  }
+
+  &__label {
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+  }
+
+  &__input-field {
+    position: relative;
+  }
+}
+
+.modal-input {
+  display: block;
+  width: 100%;
+  padding: 10px 30px;
+
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:focus {
+    border-color: $third-color;
+  }
+
+  transition: border-color 250ms $timing-function;
+}
+
+.modal-input:focus + .input-icon {
+  fill: $third-color;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(-50%, -50%);
+
+  transition: fill 250ms $timing-function;
+}
+
+.modal-comment {
+  width: 100%;
+  resize: none;
+  padding: 12px 16px;
+
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:focus {
+    border-color: $third-color;
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  transition: border-color 250ms $timing-function;
+}
+
+.modal-checkbox {
+  @extend %centered-flex;
+}
+
+.terms-checkbox {
+  appearance: none;
+}
+
+.checkbox {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.checkbox-icon {
+  margin-right: 7px;
+
+  border: 2px solid $secondary-color;
+  border-radius: 2px;
+
+  transition: background-color, fill 250ms $timing-function;
+}
+
+.terms-checkbox:checked + .checkbox-icon {
+  background-color: $third-color;
+
+  border: none;
+}
+
+.terms-label {
+  @extend %centered-flex;
+
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.terms-link {
+  color: $third-color;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin-left: 5px;
+}
+
+.modal-button {
+  display: block;
+
+  padding: 10px 52px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  fill: $sixth-color;
+  color: $sixth-color;
+  background-color: $third-color;
+
+  &:focus,
+  &:hover {
+    background-color: $ninth-color;
+  }
+
+  transition: background-color 250ms $timing-function;
+}
