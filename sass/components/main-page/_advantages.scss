@@ -1,5 +1,9 @@
 .advantages {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 
   &__icon {
     @extend %centered-flex;
@@ -9,16 +13,32 @@
     margin-bottom: 30px;
   }
 
-  &__item:not(:first-child) {
-    margin-left: 30px;
+  &__item {
+    @media screen and (min-width: 480px) {
+      max-width: 450px;
+      margin-right: auto;
+      margin-left: auto;
+
+      @media screen and (min-width: 768px) {
+        width: calc((100% - 4 * 15px) / 2);
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 270px;
+      }
+    }
   }
 
   &__title {
     color: $secondary-color;
     font-size: 14px;
     line-height: 1.18;
-    text-transform: uppercase;
+
     margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__text {

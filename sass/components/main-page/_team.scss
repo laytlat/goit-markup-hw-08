@@ -3,9 +3,12 @@
 }
 
 .team {
-  display: flex;
   padding-top: 50px;
-  justify-content: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 
   &__member {
     background-color: $sixth-color;
@@ -13,8 +16,25 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    &:not(:last-child) {
-      margin-right: 30px;
+    @media screen and (min-width: 480px) {
+      width: 450px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 4 * 15px) / 2);
+      max-width: 355px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 8 * 15px) / 4);
     }
   }
 }
@@ -27,10 +47,16 @@
   &__name {
     color: $secondary-color;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 16px;
+    line-height: 1.19;
+
     margin-bottom: 10px;
     text-align: center;
+
+    // @media screen and (min-width: 480px) {
+    //   font-size: 14px;
+    //   line-height: 1.71;
+    // }
   }
 
   &__role {
