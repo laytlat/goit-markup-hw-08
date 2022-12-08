@@ -4,136 +4,147 @@
   margin-left: auto;
   margin-right: auto;
   background-color: $seventh-color;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
-// .footer-list {
-//   display: flex;
+.footer-list {
+  // display: flex;
 
-//   &__logo {
-//     display: inline-block;
-//     margin-bottom: 20px;
-//   }
-// }
+  &__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 
-// .adress {
-//   color: $sixth-color;
+.adress {
+  color: $sixth-color;
 
-//   font-weight: 400;
-//   font-size: 14px;
-//   line-height: 1.71;
-//   font-style: normal;
-//   padding-left: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  font-style: normal;
+  padding-left: 0;
 
-//   &:focus,
-//   &:hover {
-//     color: $third-color;
-//     fill: $third-color;
-//   }
+  &:focus,
+  &:hover {
+    color: $third-color;
+    fill: $third-color;
+  }
 
-//   transition: fill, color 250ms $timing-function;
-// }
+  transition: fill, color 250ms $timing-function;
+}
 
-// .contacts__link--footer {
-//   font-weight: 400;
-//   font-size: 14px;
-//   line-height: 1.71;
-// }
+.contacts__link--footer {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
 
-// .footer-title {
-//   font-style: normal;
-//   font-weight: 700;
-//   font-size: 14px;
-//   line-height: 16px;
-//   letter-spacing: 0.03em;
-//   text-transform: uppercase;
-//   color: $sixth-color;
-//   margin-bottom: 20px;
-// }
+.footer-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $sixth-color;
+  margin-bottom: 20px;
+}
 
-// .footer-social-links {
-//   margin-left: 70px;
-//   margin-top: 20px;
+.footer-social-links {
+  // margin-left: 70px;
+  margin-top: 60px;
 
-//   &__icons {
-//     display: flex;
-//     justify-content: center;
-//   }
+  &__icons {
+    display: flex;
+    justify-content: center;
+  }
 
-//   &__item {
-//     width: 44px;
-//     height: 44px;
+  &__item {
+    width: 44px;
+    height: 44px;
 
-//     margin-right: 10px;
-//   }
+    margin-right: 10px;
+  }
 
-//   &__link {
-//     @extend %centered-flex;
+  &__link {
+    @extend %centered-flex;
 
-//     width: 100%;
-//     height: 100%;
+    width: 100%;
+    height: 100%;
 
-//     fill: $sixth-color;
-//     border-radius: 50%;
-//     background-color: rgba(255, 255, 255, 0.1);
+    fill: $sixth-color;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
 
-//     transition: background-color 250ms $timing-function;
+    transition: background-color 250ms $timing-function;
 
-//     &:focus,
-//     &:hover {
-//       background-color: $third-color;
-//     }
-//   }
-// }
+    &:focus,
+    &:hover {
+      background-color: $third-color;
+    }
+  }
+}
 
-// .subscription-form {
-//   margin-left: 95px;
-//   margin-top: 20px;
-// }
+.subscription-form {
+  // margin-left: 95px;
+  margin-top: 60px;
+}
 
-// .subscription {
-//   display: flex;
-//   margin-top: 20px;
+.subscription {
+  //   display: flex;
+  margin-top: 60px;
 
-//   &__input {
-//     background-color: $seventh-color;
-//     border: 1px solid rgba(255, 255, 255, 0.3);
-//     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-//     border-radius: 4px;
-//     outline: none;
+  &__input {
+    background-color: $seventh-color;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
 
-//     min-width: 360px;
-//     padding-left: 15px;
+    min-height: 50px;
+    width: 100%;
+    min-width: 360px;
+    padding-left: 15px;
+    margin-bottom: 20px;
 
-//     color: $fourth-color;
+    color: $fourth-color;
 
-//     &:focus {
-//       border-color: $third-color;
-//     }
-//   }
+    &:focus {
+      border-color: $third-color;
+    }
+  }
 
-//   &__button {
-//     @extend %centered-flex;
+  &__button {
+    @extend %centered-flex;
+    margin-right: auto;
+    margin-left: auto;
 
-//     margin-left: 12px;
-//     padding: 10px 28px;
+    // margin-left: 12px;
+    padding: 10px 28px;
 
-//     border: none;
-//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-//     border-radius: 4px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 
-//     fill: $sixth-color;
-//     color: $sixth-color;
-//     background-color: $third-color;
+    fill: $sixth-color;
+    color: $sixth-color;
+    background-color: $third-color;
 
-//     &:focus,
-//     &:hover {
-//       background-color: $ninth-color;
-//     }
+    &:focus,
+    &:hover {
+      background-color: $ninth-color;
+    }
 
-//     transition: background-color 250ms $timing-function;
-//   }
+    transition: background-color 250ms $timing-function;
+  }
 
-//   &__icon {
-//     margin-left: 10px;
-//   }
-// }
+  &__icon {
+    margin-left: 10px;
+  }
+}

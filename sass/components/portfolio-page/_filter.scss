@@ -1,7 +1,12 @@
 .filter {
   @extend %centered-flex;
   margin-bottom: 35px;
+  flex-wrap: wrap;
   gap: 8px;
+
+  @media screen and (max-width: 767px) {
+    justify-content: flex-start;
+  }
 
   &__button {
     color: $secondary-color;

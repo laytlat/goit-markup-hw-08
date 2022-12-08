@@ -2,6 +2,25 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+
+  &__item {
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (max-width: 767px) {
+      width: calc((100% - 2 * 15px) / 1);
+      max-width: 370px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 4 * 15px) / 2);
+      max-width: 355px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 6 * 15px) / 3);
+    }
+  }
 }
 
 .project {
