@@ -76,7 +76,7 @@
       &::after {
         content: '';
         position: absolute;
-        bottom: -122%;
+        bottom: -102%;
         left: 0;
         width: 100%;
 
@@ -124,8 +124,8 @@
   }
 
   &__link {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
 
     color: var(--main-color);
     font-style: normal;
