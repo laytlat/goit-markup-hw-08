@@ -55,6 +55,13 @@
   &.is-open .mobile-menu-button__open-icon {
     display: none;
   }
+
+  transition: fill 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: $third-color;
+  }
 }
 
 .header-social {
