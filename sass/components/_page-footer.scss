@@ -1,3 +1,9 @@
+.footer-container {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -11,13 +17,27 @@
 }
 
 .footer-list {
-  // display: flex;
-
   &__logo {
     display: inline-block;
     margin-bottom: 20px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  &__item {
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+    @media screen and (min-width: 1200px) {
+      &:not(:first-child) {
+        margin-left: 70px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
   }
 }
 
@@ -58,7 +78,10 @@
 
 .footer-social-links {
   // margin-left: 70px;
-  margin-top: 60px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
 
   &__icons {
     display: flex;
@@ -92,13 +115,22 @@
 }
 
 .subscription-form {
-  // margin-left: 95px;
-  margin-top: 60px;
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 95px;
+  }
 }
 
 .subscription {
-  //   display: flex;
-  margin-top: 60px;
+  margin-top: 20px;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 
   &__input {
     background-color: $seventh-color;
@@ -109,11 +141,18 @@
 
     min-height: 50px;
     width: 100%;
-    min-width: 360px;
+
     padding-left: 15px;
-    margin-bottom: 20px;
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
 
     color: $fourth-color;
+
+    @media screen and (min-width: 768px) {
+      width: 50%;
+      min-width: 360px;
+    }
 
     &:focus {
       border-color: $third-color;
@@ -125,7 +164,9 @@
     margin-right: auto;
     margin-left: auto;
 
-    // margin-left: 12px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 12px;
+    }
     padding: 10px 28px;
 
     border: none;
