@@ -1,6 +1,7 @@
 .clients {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   margin: 30px auto;
   // @extend %centered-flex;

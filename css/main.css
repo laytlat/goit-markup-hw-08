@@ -129,6 +129,11 @@ body {
   fill: #2196f3;
 }
 @media screen and (max-width: 767px) {
+  .nav-list__link:hover, .nav-list__link:focus {
+    padding-left: 8px;
+  }
+}
+@media screen and (max-width: 767px) {
   .nav-list__link {
     font-size: 40px;
     line-height: 47px;
@@ -143,11 +148,6 @@ body {
 .nav-list__link--current {
   color: #2196f3;
   position: relative;
-}
-@media screen and (max-width: 767px) {
-  .nav-list__link--current {
-    padding-left: 8px;
-  }
 }
 @media screen and (min-width: 768px) {
   .nav-list__link--current::after {
@@ -540,7 +540,7 @@ body {
 }
 
 .backdrop {
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
@@ -564,8 +564,8 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  max-width: 528px;
-  max-height: 581px;
+  max-width: 90vw;
+  overflow-y: scroll;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -690,6 +690,11 @@ body {
 }
 .modal-comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-checkbox {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .terms-checkbox {
@@ -940,6 +945,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 30px;
   margin: 30px auto;
 }
@@ -1104,6 +1112,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    overflow-x: scroll;
     background-color: #ffffff;
     display: none;
     width: 100vw;

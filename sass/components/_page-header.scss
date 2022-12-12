@@ -54,6 +54,9 @@
     &:focus {
       color: $third-color;
       fill: $third-color;
+      @media screen and(max-width: 767px) {
+        padding-left: 8px;
+      }
     }
 
     @media screen and (max-width: 767px) {
@@ -69,9 +72,7 @@
   &__link--current {
     color: $third-color;
     position: relative;
-    @media screen and(max-width: 767px) {
-      padding-left: 8px;
-    }
+
     @media screen and (min-width: 768px) {
       &::after {
         content: '';
