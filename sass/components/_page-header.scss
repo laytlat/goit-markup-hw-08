@@ -27,7 +27,7 @@
   @media screen and(min-width:768px) {
     display: flex;
     justify-content: space-between;
-    margin-right: 50px;
+    margin-right: 120px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -75,7 +75,7 @@
       &::after {
         content: '';
         position: absolute;
-        bottom: -102%;
+        bottom: -103%;
         left: 0;
         width: 100%;
 
@@ -114,7 +114,6 @@
     @media screen and(max-width:767px) {
       margin-top: 30px;
     }
-    //     @extend %centered-flex;
     @media screen and (min-width: 1200px) {
       &:not(:first-child) {
         margin-left: 50px;
@@ -123,9 +122,6 @@
   }
 
   &__link {
-    // display: flex;
-    // align-items: center;
-
     color: var(--main-color);
     font-style: normal;
     font-weight: 500;
@@ -178,4 +174,12 @@
 .contacts__link--header {
   display: flex;
   align-items: center;
+}
+
+.contacts__item--header {
+  &:last-child {
+    @media screen and (max-width: 1199px) {
+      margin-top: 10px;
+    }
+  }
 }
