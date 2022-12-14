@@ -23,7 +23,21 @@
         <a lang="en" href="./index.html" class="item logo link"
           ><span class="logo-web">Web</span>Studio</a
         >
-        <div class="mobile-menu" data-menu>
+        <button
+          type="button"
+          class="mobile-menu-button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="24px" height="24px">
+            <use
+              class="mobile-menu-button__open-icon"
+              href="./images/icons.svg#icon-open-menu"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu js-menu-container" id="mobile-menu">
           <nav>
             <ul class="nav-list list">
               <li class="nav-list__item">
@@ -38,7 +52,7 @@
             </ul>
           </nav>
           <ul class="contacts list">
-            <li class="contacts__item">
+            <li class="contacts__item contacts__item--header">
               <a
                 href="mailto:info@devstudio.com"
                 class="contacts__link link contacts__link--header"
@@ -49,7 +63,7 @@
                 info@devstudio.com</a
               >
             </li>
-            <li class="contacts__item">
+            <li class="contacts__item contacts__item--header">
               <a href="tel:+380961111111" class="contacts__link link contacts__link--header">
                 <svg class="contacts__icon" width="10" height="16">
                   <use href="./images/icons.svg#icon-phone"></use>
@@ -67,22 +81,26 @@
               <a href="#" class="header-social__link link">Twitter</a>
             </li>
             <li class="header-social__item">
-              <a href="#" class="header-social__link link"></a>Facebook
+              <a href="#" class="header-social__link link">Facebook</a>
             </li>
             <li class="header-social__item">
               <a href="#" class="header-social__link link">LinkedIn</a>
             </li>
           </ul>
+          <button
+            type="button"
+            class="mobile-menu-button mobile-menu-button--close js-close-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="24px" height="24px">
+              <use
+                class="mobile-menu-button__close-icon"
+                href="./images/icons.svg#icon-close"
+              ></use>
+            </svg>
+          </button>
         </div>
-        <button type="button" class="mobile-menu-button" data-menu-button>
-          <svg width="24px" height="24px">
-            <use
-              class="mobile-menu-button__open-icon"
-              href="./images/icons.svg#icon-open-menu"
-            ></use>
-            <use class="mobile-menu-button__close-icon" href="./images/icons.svg#icon-close"></use>
-          </svg>
-        </button>
       </div>
     </header>
 

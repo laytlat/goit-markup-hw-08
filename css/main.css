@@ -1223,12 +1223,17 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-left: 40px;
 }
 @media screen and (min-width: 768px) {
   .header-social {
     display: none;
   }
+}
+.header-social__item {
+  margin-top: 10px;
 }
 .header-social__item:not(:first-child) {
   margin-left: 20px;
