@@ -51,42 +51,44 @@
               <li class="nav-list__item"><a href="#" class="nav-list__link link">Контакти</a></li>
             </ul>
           </nav>
-          <ul class="contacts list">
-            <li class="contacts__item contacts__item--header">
-              <a
-                href="mailto:info@devstudio.com"
-                class="contacts__link link contacts__link--header"
-              >
-                <svg class="contacts__icon" width="16" height="12">
-                  <use href="./images/icons.svg#icon-letter"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="contacts__item contacts__item--header">
-              <a href="tel:+380961111111" class="contacts__link link contacts__link--header">
-                <svg class="contacts__icon" width="10" height="16">
-                  <use href="./images/icons.svg#icon-phone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+          <div>
+            <ul class="contacts list">
+              <li class="contacts__item contacts__item--header">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="contacts__link link contacts__link--header"
+                >
+                  <svg class="contacts__icon" width="16" height="12">
+                    <use href="./images/icons.svg#icon-letter"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts__item contacts__item--header">
+                <a href="tel:+380961111111" class="contacts__link link contacts__link--header">
+                  <svg class="contacts__icon" width="10" height="16">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
 
-          <ul class="header-social list">
-            <li class="header-social__item">
-              <a href="#" class="header-social__link link">Instgram</a>
-            </li>
-            <li class="header-social__item">
-              <a href="#" class="header-social__link link">Twitter</a>
-            </li>
-            <li class="header-social__item">
-              <a href="#" class="header-social__link link">Facebook</a>
-            </li>
-            <li class="header-social__item">
-              <a href="#" class="header-social__link link">LinkedIn</a>
-            </li>
-          </ul>
+            <ul class="header-social list">
+              <li class="header-social__item">
+                <a href="#" class="header-social__link link">Instgram</a>
+              </li>
+              <li class="header-social__item">
+                <a href="#" class="header-social__link link">Twitter</a>
+              </li>
+              <li class="header-social__item">
+                <a href="#" class="header-social__link link">Facebook</a>
+              </li>
+              <li class="header-social__item">
+                <a href="#" class="header-social__link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
           <button
             type="button"
             class="mobile-menu-button mobile-menu-button--close js-close-menu"
@@ -293,13 +295,31 @@
           <ul class="team list">
             <li class="team__member">
               <div class="member">
-                <img
-                  srcset="./images/photo_ihor.jpg 1x, ./images/photo_ihor2x.jpg 2x"
-                  src="./images/photo_ihor.jpg"
-                  alt="Ігор Дем'яненко"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop_photo_ihor.jpg    1x,
+                      ./images/desktop_photo_ihor@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    sizes="(min-width: 1200px) 25vw"
+                  />
+                  <source
+                    srcset="./images/tablet_photo_ihor.jpg 1x, ./images/tablet_photo_ihor@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                    sizes="(min-width: 768px) 50vw"
+                  />
+                  <source
+                    srcset="./images/mobile_photo_ihor.jpg 1x, ./images/mobile_photo_ihor@2x.jpg 2x"
+                    sizes="100vw"
+                  />
+
+                  <img
+                    class="member__photo"
+                    src="./images/mobile_photo_ihor.jpg"
+                    alt="Ігор Дем'яненко"
+                  />
+                </picture>
                 <div class="member__footer">
                   <h3 class="member__name">Ігор Дем'яненко</h3>
                   <p lang="en" class="member__role">Product Designer</p>
@@ -338,13 +358,31 @@
             </li>
             <li class="team__member">
               <div class="member">
-                <img
-                  srcset="./images/photo_olha.jpg 1x, ./images/photo_olha2x.jpg 2x"
-                  src="./images/photo_olha.jpg"
-                  alt="Ольга Рєпіна"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop_photo_olha.jpg    1x,
+                      ./images/desktop_photo_olha@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    sizes="(min-width: 1200px) 25vw"
+                  />
+                  <source
+                    srcset="./images/tablet_photo_olha.jpg 1x, ./images/tablet_photo_olha@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                    sizes="(min-width: 768px) 50vw"
+                  />
+                  <source
+                    srcset="./images/mobile_photo_olha.jpg 1x, ./images/mobile_photo_olha@2x.jpg 2x"
+                    sizes="100vw"
+                  />
+
+                  <img
+                    class="member__photo"
+                    src="./images/mobile_photo_olha.jpg"
+                    alt="Ольга Рєпіна"
+                  />
+                </picture>
                 <div class="member__footer">
                   <h3 class="member__name">Ольга Рєпіна</h3>
                   <p lang="en" class="member__role">Frontend Developer</p>
@@ -383,13 +421,37 @@
             </li>
             <li class="team__member">
               <div class="member">
-                <img
-                  srcset="./images/photo_mykola.jpg 1x, ./images/photo_mykola2x.jpg 2x"
-                  src="./images/photo_mykola.jpg"
-                  alt="Микола Тарасов"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop_photo_mykola.jpg    1x,
+                      ./images/desktop_photo_mykola@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    sizes="(min-width: 1200px) 25vw"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet_photo_mykola.jpg    1x,
+                      ./images/tablet_photo_mykola@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    sizes="(min-width: 768px) 50vw"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile_photo_mykola.jpg    1x,
+                      ./images/mobile_photo_mykola@2x.jpg 2x
+                    "
+                    sizes="100vw"
+                  />
+
+                  <img
+                    class="member__photo"
+                    src="./images/mobile_photo_mykola.jpg"
+                    alt="Микола Тарасов"
+                  />
+                </picture>
                 <div class="member__footer">
                   <h3 class="member__name">Микола Тарасов</h3>
                   <p lang="en" class="member__role">Marketing</p>
@@ -428,13 +490,37 @@
             </li>
             <li class="team__member">
               <div class="member">
-                <img
-                  srcset="./images/photo_mykhailo.jpg 1x, ./images/photo_mykhailo2x.jpg 2x"
-                  src="./images/photo_mykhailo.jpg"
-                  alt="Михайло Єрмаков"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop_photo_mykhailo.jpg    1x,
+                      ./images/desktop_photo_mykhailo@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    sizes="(min-width: 1200px) 25vw"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet_photo_mykhailo.jpg    1x,
+                      ./images/tablet_photo_mykhailo@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    sizes="(min-width: 768px) 50vw"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile_photo_mykhailo.jpg    1x,
+                      ./images/mobile_photo_mykhailo@2x.jpg 2x
+                    "
+                    sizes="100vw"
+                  />
+
+                  <img
+                    class="member__photo"
+                    src="./images/mobile_photo_mykhailo.jpg"
+                    alt="Михайло Єрмаков"
+                  />
+                </picture>
                 <div class="member__footer">
                   <h3 class="member__name">Михайло Єрмаков</h3>
                   <p lang="en" class="member__role">UI Designer</p>

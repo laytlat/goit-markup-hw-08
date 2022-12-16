@@ -4,35 +4,27 @@
   gap: 30px;
 
   &__item {
-    margin-right: auto;
-    margin-left: auto;
-
     @media screen and (max-width: 767px) {
-      width: calc((100% - 2 * 15px) / 1);
-      max-width: 370px;
+      flex-basis: calc((100% - 30px) / 1);
     }
 
     @media screen and (min-width: 768px) {
-      width: calc((100% - 4 * 15px) / 2);
-      max-width: 355px;
+      flex-basis: calc((100% - 30px) / 2);
     }
 
     @media screen and (min-width: 1200px) {
-      min-width: 370px;
+      flex-basis: calc((100% - 60px) / 3);
     }
   }
 }
 
 .project {
+  flex-grow: 1;
   background: $sixth-color;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   padding: 20px 24px;
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    min-height: 150px;
-  }
 
   &__title {
     color: $secondary-color;
@@ -48,6 +40,9 @@
   }
 
   &__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     transition: box-shadow 250ms $timing-function;
     &:hover {
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),

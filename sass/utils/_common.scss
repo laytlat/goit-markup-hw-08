@@ -1,6 +1,6 @@
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -53,3 +53,7 @@ body {
   line-height: 1.16;
   text-align: center;
 }
+
+// sizes="(min-width: 1200px) 25vw"
+// sizes="(min-width: 768px) 50vw"
+// sizes="100vw"

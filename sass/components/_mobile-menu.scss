@@ -4,7 +4,9 @@
     top: 0;
     left: 0;
     overflow-x: scroll;
+    overflow-y: auto;
 
+    padding: 48px 0 48px 40px;
     transform: translateX(100%);
     transition: transform 500ms $timing-function;
     &.is-open {
@@ -16,7 +18,8 @@
     &.is-open {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: space-between;
+      gap: 20px;
     }
     width: 100vw;
     height: 100vh;
@@ -62,20 +65,17 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 20px;
 
-  margin-left: 40px;
+  margin-top: 60px;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
 
-  &__item {
-    margin-top: 10px;
-  }
-
-  &__item:not(:first-child) {
-    margin-left: 20px;
-    padding-left: 15px;
-    border-left: 1px solid $tenth-color;
+  &__item:not(:last-child) {
+    padding-right: 15px;
+    border-right: 1px solid $tenth-color;
   }
 
   &__link {
